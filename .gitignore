@@ -1,0 +1,5 @@
+node_modules/
+.env
+**/midscene_run/
+result.txt
+test_assertion.sh
