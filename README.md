@@ -2,16 +2,7 @@
 
 本项目基于 Midscene.js 框架，利用多模态视觉大模型（VLM）实现 Android 端的 UI 自动化测试及断言。
 
-## 📁 项目结构
-
-- `demo.ts`: Midscene 基础演示脚本（eBay 搜索示例）。
-- `vip_center.ts`: 会员中心单设备测试脚本，包含广告弹窗处理及视觉基准断言（aiAssert）。
-- `mult-vip_center.ts`: **多设备并行测试**脚本，支持同时控制多台 Android 设备执行相同任务。
-- `demo-run-yaml.ts`: 使用 YAML 格式定义测试步骤并运行的示例。
-- `test_assertion.sh`: 自动化压测及断言准确性统计脚本（Shell）。
-- `pic/`: 存放视觉断言对比的基准图（Baseline Images）。
-- `midscene_run/`: 执行后自动生成的运行日志和可视化 HTML 报告（已在 `.gitignore` 中忽略）。
-
+main
 ## 🚀 快速开始
 
 ### 1. 配置环境
