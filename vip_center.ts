@@ -22,6 +22,11 @@ Promise.resolve(
     await page.launch('tv.danmaku.bili/tv.danmaku.bili.MainActivityV2');    
     await agent.aiTap('页面有下角的 我的 tab')
     await agent.aiTap('页面中心的红色的横条，有会员中心的字体')
+    
+    // 普通断言：检查页面关键元素
+    await agent.aiWaitFor('页面顶部显示“会员中心”')
+    await agent.aiAssert('当前页面是会员中心，且能看到我的头像、昵称或会员状态信息')
+
     await console.timeEnd('AI动作耗时')
 
   })()
