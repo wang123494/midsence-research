@@ -2,9 +2,7 @@
 
 本项目基于 Midscene.js 框架，利用多模态视觉大模型（VLM）实现 Android 端的 UI 自动化测试及断言。
 
-## 📁 分支
-main 分支为简单的例子
-mult-vip-center 分支为多设备并行测试的例子 
+main
 ## 🚀 快速开始
 
 ### 1. 配置环境
