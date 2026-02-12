@@ -25,7 +25,16 @@ Promise.resolve(
     
     // 普通断言：检查页面关键元素
     await agent.aiWaitFor('页面顶部显示“会员中心”')
-    await agent.aiAssert('当前页面是会员中心，且能看到我的头像、昵称或会员状态信息')
+
+    await agent.aiAssert({
+        prompt: "请对比当前页面与提供的基准图(benchmark)，检查页面是否有明显的变化，比如布局错乱、缺失重要元素等。忽略动态加载的 Banner 内容、用户 ID、电量和时间等。主要结构正确即认为通过。",
+        images: [
+                  {
+                    name: "benchmark",
+                    url: "/Users/wangyuxuan/AI-UI自动化/javascript-sdk-demo/pic/vip_center_birthday_banner.png"
+                      }
+                ],
+    }, "视觉一致性检查", { deepThink: false })
 
     await console.timeEnd('AI动作耗时')
 
